@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: eleinfweb
+#  profiles:
+#    active: development
+  cloud:
+    config:
+      uri: http://localhost:8802
+
+  rabbitmq:
+        addresses: amqp://localhost:5672
+        username: guest
+        password: guest
+
+encrypt:
+  failOnError: false
+
