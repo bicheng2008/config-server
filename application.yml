@@ -24,12 +24,12 @@ eureka:
   instance:
     preferIpAddress: true
 
-logging:
-  level:
-    zipkin2: DEBUG
-    zipkin.server: DEBUG
-    io.zipkin.java: DEBUG
-    org.springframework.boot: DEBUG
+#logging:
+#  level:
+#    zipkin2: DEBUG
+#    zipkin.server: DEBUG
+#    io.zipkin.java: DEBUG
+#    org.springframework.boot: DEBUG
 
 #---
 #spring.cloud.loadbalancer.retry.enabled: true
