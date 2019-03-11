@@ -4,6 +4,7 @@ spring:
 #  profiles:
 #    active: development
   cloud:
+    lable: master
     config:
       uri: http://172.17.210.24:8802
 
