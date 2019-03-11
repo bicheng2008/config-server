@@ -8,7 +8,7 @@ spring:
   zipkin:
     enabled: true
     #local用
-    base-url: http://localhost:8803
+    base-url: http://172.17.210.24:8803
     #pcf用
     #base-url: http://zipkin-service.apps.dirpcf.net
     sender:
@@ -20,7 +20,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8801/eureka/
+      defaultZone: http://172.17.210.24:8801/eureka/
   instance:
     preferIpAddress: true
 
