@@ -2,6 +2,9 @@ server:
   port: 8093
 
 spring:
+  cloud:
+    config:
+      lable: master
   zipkin:
     enabled: true
     #local用
