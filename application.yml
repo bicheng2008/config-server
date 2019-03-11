@@ -21,11 +21,11 @@ eureka:
   instance:
     preferIpAddress: true
 
-#logging:
-#  level:
-#    zipkin2: DEBUG
-#    zipkin.server: DEBUG
-#    io.zipkin.java: DEBUG
+logging:
+  level:
+    zipkin2: DEBUG
+    zipkin.server: DEBUG
+    io.zipkin.java: DEBUG
 #    org.springframework.boot: DEBUG
 
 #---
