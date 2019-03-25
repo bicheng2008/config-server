@@ -1,0 +1,16 @@
+# Eurekaの情報
+eureka:
+#  datacenter: SpringCloud
+#  environment: Test
+  instance:    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}    
+  client:
+    serviceUrl:
+      defaultZone: http://18.188.51.39:8801/eureka/
+
+# ルート情報
+#zuul:
+#  routes:
+#    eleinfweb:
+#      url: http://18.188.51.39:8093
+      
