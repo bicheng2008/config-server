@@ -12,4 +12,4 @@ eureka:
 #  routes:
 #    eleinfweb:
 #      url: http://18.188.51.39:8093
-      
+#      name: .*      
