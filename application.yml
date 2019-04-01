@@ -2,7 +2,7 @@
 eureka:
   instance:
     prefer-ip-address: true
-    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
   client:
     serviceUrl:
       defaultZone: http://localhost:8801/eureka/
@@ -14,7 +14,8 @@ zuul:
       path: /eleinf/**
       service-id: ELEINFWEB
     
-  host:    max-total-connections: 200
+  host:
+    max-total-connections: 200
     socket-timeout-millis: 60000
     connect-timeout-millis: 60000
     
