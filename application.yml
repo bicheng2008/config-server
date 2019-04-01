@@ -12,7 +12,7 @@ zuul:
   routes:
     eleinfweb:
       path: /eleinf/**
-      service-id: ELEINFWEB
+      service-id: eleinfweb
     
   host:
     max-total-connections: 200
