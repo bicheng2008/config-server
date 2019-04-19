@@ -1,0 +1,73 @@
+server:
+  port: 8903
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8801/eureka/
+  instance:
+    preferIpAddress: true
+
+encrypt:
+  failOnError: false
+
+security:
+  basic:
+    enabled: false
+# datasource
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/point_db?characterEncoding=utf8&useSSL=false
+    username: root
+    password: P@ssw0rd
+    initialSize: 5
+    minIdle: 4
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,log4j
+    #connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    #useGlobalDataSourceStat=true
+
+  jpa:
+    database: MYSQL
+    show-sql: false
+  ## Hibernate ddl auto (validate|create|create-drop|update)
+    hibernate:
+      ddl-auto: update
+      #naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+  redis:
+        host: 192.168.1.23
+        port: 6379
+#        password: 12345678
+        pool:
+          max-idle: 8
+          min-idle: 0
+          max-active: 8
+          max-wait: -1
+
+#zipkin
+  zipkin:
+    enabled: true
+    #local用
+    #base-url: http://localhost:8803
+    #pcf用
+    base-url: http://zipkin-service.apps.dirpcf.net
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      percentage: 1.0
