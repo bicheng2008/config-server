@@ -18,7 +18,7 @@ security:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/point_db?characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://localhost:33306/point_db?characterEncoding=utf8&useSSL=false
     username: root
     password: P@ssw0rd
     initialSize: 5
