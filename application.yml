@@ -53,9 +53,9 @@ spring:
   zipkin:
     enabled: true
     #local用
-    #base-url: http://18.188.51.39:8803
+    base-url: http://18.188.51.39:8803/
     #pcf用
-    base-url: http://zipkin-service.apps.dirpcf.net
+    #base-url: http://zipkin-service.apps.dirpcf.net
     sender:
       type: web
   sleuth:
