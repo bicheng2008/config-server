@@ -24,3 +24,7 @@ spring:
   sleuth:
     sampler:
       percentage: 1.0
+
+webui:
+  GasCustomerContractManage: /GasCustomerContract
+  GasOfferManage: /GasOffer
